@@ -7,7 +7,9 @@ import json
 import requests
 import http.client
 from sklearn import preprocessing
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+# Import pad_sequences from keras.preprocessing.sequence for TensorFlow 2.7.0
+from keras.preprocessing.sequence import pad_sequences
+
 
 API_TOKEN = os.environ.get('API_TOKEN')
 label_encoder = preprocessing.LabelEncoder()
